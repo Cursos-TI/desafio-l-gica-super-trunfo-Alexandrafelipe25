@@ -144,13 +144,24 @@ int main() {
     printf("PIB per Capita: Carta 1 venceu (%d)\n", vpercapita);
     printf("Super Poder: Carta 1 venceu (%d)\n", vsuperpoder);
 
+    // --- COMPARAÇÃO ---
+    printf("\n--- Resultado da Comparacao ---\n");
+    // O atributo de comparacao foi definido como "Populacao" diretamente no código.
+    printf("Comparacao de cartas (Atributo: Populacao)\n\n");
+    
+    // Exibe os valores do atributo de comparação
+    printf("Carta 1 - %s (%s): %lu\n", cidade1, estado1, populacao1);
+    printf("Carta 2 - %s (%s): %lu\n", cidade2, estado2, populacao2);
+    
+    // Lógica para determinar o vencedor
+    if (populacao1 > populacao2) {
+        printf("Resultado: Carta 1 (%s) venceu!\n", cidade1);
+    } else if (populacao2 > populacao1) {
+        printf("Resultado: Carta 2 (%s) venceu!\n", cidade2);
+    } else {
+        printf("Resultado: Empate!\n");
+        
 
-    // Exemplo:
-    // if (populacaoA > populacaoB) {
-    //     printf("Cidade 1 tem maior população.\n");
-    // } else {
-    //     printf("Cidade 2 tem maior população.\n");
-    // }
 
     // Exibição dos Resultados:
     // Após realizar as comparações, exiba os resultados para o usuário.
@@ -161,3 +172,4 @@ int main() {
 
     return 0;
 }
+
